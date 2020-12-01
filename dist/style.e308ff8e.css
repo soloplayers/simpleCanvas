@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.myCanvas{
+  position: relative;
+  background-color: white;
+  display: block;
+  margin-top: 4px;
+  margin-left: 5px;
+  box-shadow: 3px 3px 3px 3px rgba(0,0,0,.3);
+}
+
+/* 工具导航栏 */
+.navBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 20vh;
+  max-width: 700px;
+}
+.navBar div {
+  width: 150px;
+}
+
+/* 线条粗细 */
+.lineWidth{
+  box-shadow: 3px 3px 3px 3px rgba(0,80,0,.3);
+}
+.line1,.line2,.line3,.line4{
+  position: relative;
+  height: 20px;
+}
+.line1:hover,.line2:hover,.line3:hover,.line4:hover{
+  background-color: #edf4fc;
+}
+
+.line1::after,.line2::after,.line3::after,.line4::after{
+  display: block;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+}
+
+.line1::after{
+  border-top: 1px solid #3d5574;
+}
+.line2::after{
+  border-top: 3px solid #3d5574;
+}
+.line3::after{
+  border-top: 5px solid #3d5574;
+}
+.line4::after{
+  border-top: 8px solid #3d5574;
+}
+.selected{
+  background-color: #cee5fc;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+/* 画板栏 */
+.main{
+  /* 让它变成弹性盒子，可以自动撑开盒子 */
+  display: flex;
+  background-color: #cdd6e5;
+}
+
+/* 颜色栏 */
+/* 线条颜色 */
+.colorWrapper{
+  box-shadow: 3px 3px 3px 3px rgba(20,0,30,.3);
+}
+#width{
+  width: 80px;
+}
+
+#color{
+  height: 50px;
+  width: 50px;
+  border-radius: 12.5%;
+}
+
+.lineColor{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.colorNav{
+  box-shadow: 3px 3px 3px 3px rgba(0,0,100,.3);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid white;
+}
+
+.colorNav div {
+  border: 3px solid #a0a0a0;
+  width: 25px;
+  height: 25px;
+}
+
+/* 刷子 */
+.brush{
+  box-shadow: 3px 3px 3px 3px rgba(100,0,0,.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.brush span{
+  font-size: 12px;
+}
+.brush div {
+  text-align: center;
+  border-bottom: 1px solid #333333;
+}
+
+.rectangle{
+  display: none;
+  position: absolute;
+  border: 1px solid #333333;
+  width: 20px;
+  height: 20px;
+}
+.main .circle{
+  display: none;
+  position: absolute;
+  border: 1px solid #333333;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head >
+  <meta charset="UTF-8" >
+  <meta
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+      name="viewport" >
+  <title >简易画板</title >
+  <link
+      href="./style.css"
+      rel="stylesheet" >
+  <style type="text/css" >
+    body {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+    .icon {
+      border: 1px solid royalblue;
+      width: 2em;
+      height: 2em;
+      vertical-align: -0.3em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+    .icon.circle{
+      width: 2.2em;
+      height: 2.2em;
+      border-radius: 50%;
+    }
+  </style >
+</head >
+<body >
+
+<nav class="navBar" >
+  <div class="brush" >
+    <div >橡皮擦</div >
+    <svg
+        aria-hidden="true"
+        class="icon rect" >
+      <use xlink:href="#icon-xiangpica" ></use >
+    </svg >
+    <span > 正方形</span >
+    <svg
+        aria-hidden="true"
+        class="icon circle" >
+      <use xlink:href="#icon-xiangpica" ></use >
+    </svg >
+    <span >圆形</span >
+  </div >
+  <div class="lineWidth" >
+    <div
+        class="line1 selected"
+        data-width="1"
+        title="1px" ></div >
+    <div
+        class="line2"
+        data-width="3"
+        title="3px" ></div >
+    <div
+        class="line3"
+        data-width="5"
+        title="5px" ></div >
+    <div
+        class="line4"
+        data-width="8"
+        title="8px" ></div >
+    <label
+        class="wrapper"
+        for="width" >
+      <span >线条粗细</span ><input
+        id="width"
+        max="50"
+        min="1"
+        placeholder="单位：px"
+        type="number" />
+    </label >
+  </div >
+  <div class="colorWrapper">
+    <label
+        class="lineColor"
+        for="color" >
+      <span >线条颜色</span >
+      <input
+          id="color"
+          type="color" >
+    </label >
+  </div >
+  <div class="colorNav" >
+    <div style="background-color: #000000" ></div >
+    <div style="background-color: #7f7f7f" ></div >
+    <div style="background-color: #880015" ></div >
+    <div style="background-color: #ed1c24" ></div >
+    <div style="background-color: #ff7f27" ></div >
+    <div style="background-color: #fff200" ></div >
+    <div style="background-color: #22b14c" ></div >
+    <div style="background-color: #00a2e8" ></div >
+    <div style="background-color: #3f48cc" ></div >
+    <div style="background-color: #a349a4" ></div >
+    <div style="background-color: #ffffff" ></div >
+    <div style="background-color: #c3c3c3" ></div >
+    <div style="background-color: #b97a57" ></div >
+    <div style="background-color: #ffaec9" ></div >
+    <div style="background-color: #ffc90e" ></div >
+    <div style="background-color: #efe4b0" ></div >
+    <div style="background-color: #b5e61d" ></div >
+    <div style="background-color: #99d9ea" ></div >
+    <div style="background-color: #7092be" ></div >
+    <div style="background-color: #c8bfe7" ></div >
+  </div >
+</nav >
+<main class="main" >
+  <canvas class="myCanvas" ></canvas >
+  <div class="rectangle" ></div >
+  <div class="circle" ></div >
+</main >
+<script src="//at.alicdn.com/t/font_2120427_lzci2rd5i7c.js" ></script >
+<script src="main.js" ></script >
+</body >
+</html >
